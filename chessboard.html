@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Chessboard</title>
+</head>
+<body bgcolor="000000">
+<h1><center><font face="Comic Sans MS" color="blue">Chessboard</font></center></h1><br><br>
+<script>
+/*function get_dm(n) {
+n = prompt('Enter Chessboard dimension'); 
+return n; //размерность доски
+}
+var n = get_dm(); */
+
+function chess(num,b) {
+var row = chessBoard.insertRow()
+for (var i = 0; i < num ; i++) 
+   {
+		var cell = row.insertCell();
+		cell.height = "40";
+		cell.width = "40";
+		if (b%2 == 1)
+		{
+			if (i%2 == 1){ cell.bgColor="white"; }	else	{ cell.bgColor="black";	}
+		}
+		else
+		{
+			if (i%2 == 0){ cell.bgColor="white";}	else	{ cell.bgColor="black";	}
+		}
+	}
+}
+
+var n = prompt('Enter Chessboard dimension');
+var chessBoard = document.createElement("table");
+chessBoard.setAttribute("border","1");
+//chessBoard["border"] = 1;
+for (var i = 0; i < n; i++)
+{
+  chess(n,i);
+}
+document.body.appendChild(chessBoard); //добавление таблицы в body html
+</script>
+</body>
+</html>

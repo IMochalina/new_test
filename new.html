@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Homework1</title>
+</head>
+<body>
+<h1><center>Bubble Sort</center></h1> <hr>
+<p>Student: <i><b>Mochalina Irina</b></i></p>
+<script>
+//var array = [1,2,6,3,8,5,5,3,6,2,32,4,2, -5, 0, 9999999999999999999999999999999999999];
+var array = [1,2,3,4,5,7,6,8]
+/*for (var i = 0; i<array.length; i++) {
+console.log(array[i]);
+};*/
+
+
+/*
+var ar = new Array();
+for (var x = 0; x<8; x++) {
+ar[x] = Math.floor(Math.random()*100);
+//console.log(ar[x])
+};
+*/
+
+
+function bubbleSort(arr) 
+	{
+	var tmp;
+	var k = false;
+	label:
+	for (var i = arr.length - 1; i > 0; i--)  
+	//for (var i = 0; i < arr.length; i++) 
+		{		
+			if (k == false) { k = true; }	else {	break label; }				
+				for (var j = 0; j < i; j++) 
+				//for (var j = 0; j < arr.length - 1 - i; j++) 
+				{
+					console.log ('j+1 = ' + (j+1))
+					if (arr[j] > arr[j+1]) 
+						{
+							tmp = arr[j];
+							arr[j] = arr[j+1];
+							arr[j+1] = tmp;
+							k = false;
+						}
+				}
+		
+		}
+	
+return arr;
+	}
+	
+</script>
+</body>
+</html>

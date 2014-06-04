@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Object Tree</title>
+</head>
+<body bgcolor="FFFFFF">
+<h1><center><font="Comic Sans MS" color="000000"></font>Object Tree</center></h1><br><br>
+<script>
+var o = {key1:null, key2:1, key3:"itistext", o2:{key_o:4244}, o3:{key_o:462344}};
+
+function tree(obj, prefix){
+var str = ""; 
+for (var i in obj) 
+	{
+	if (typeof o[i] == "object") { str += prefix + i + "  " + typeof obj[i] + "\n"; }
+	else { str += prefix + i + "  "  +  obj[i] + "  " + typeof obj[i] + "\n"; }
+	if (typeof o[i] == "object") { str += tree(obj[i], prefix + "  - "); }
+	}
+
+return str;
+}
+
+alert(tree(o, ""));
+
+</script>
+</body>
+</html>
